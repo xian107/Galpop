@@ -64,35 +64,40 @@ Initiate the plugin after the HTML markup.
 $('.galpop').galpop();
 ```
 Single Image
+```
 <a class="galpop-single" href="/images/gallery/large/apocalypse.jpg">
 	<img src="/images/gallery/thumbs/apocalypse.jpg" alt="An apocalyptic Earth." />
 </a>
 $('.galpop-single').galpop();
+```
 
 Multiple Images
+```
 <a class="galpop-multiple" data-galpop-group="multiple" href="/images/gallery/large/reflection.jpg">
 	<img src="/images/gallery/thumbs/reflection.jpg" alt="A magical poster with a reflection." />
 </a>
 $('.galpop-multiple').galpop();
+```
 
 Image Info
+```
 <a class="galpop-info" data-galpop-group="info" data-galpop-link="http://www.magicmediamuse.com/graphic/alice" data-galpop-link-title="Click Here For More Info" data-galpop-link-target="_blank" title="The scene from Alice in Wonderland where she meets the caterpillar." href="/images/gallery/large/alice.jpg">
 	<img src="/images/gallery/thumbs/alice.jpg" alt="The scene from Alice in Wonderland where she meets the caterpillar." />
 </a>
-
 <a class="galpop-info" data-galpop-group="info" data-galpop-link="http://www.magicmediamuse.com/graphic/reflection" data-galpop-link-title="Click Here For More Info" data-galpop-link-target="_blank" title="A magical poster with a reflection." href="/images/gallery/large/reflection.jpg">
 	<img src="/images/gallery/thumbs/reflection.jpg" alt="A magical poster with a reflection." />
 </a>
 $('.galpop-info').galpop();
+```
 
 Callbacks
+```
 <a class="galpop-callback" data-galpop-group="callback" href="/images/gallery/large/alice.jpg">
 	<img src="/images/gallery/thumbs/alice.jpg" alt="The scene from Alice in Wonderland where she meets the caterpillar." />
 </a>
 <a class="galpop-callback" data-galpop-group="callback" href="/images/gallery/large/reflection.jpg">
 	<img src="/images/gallery/thumbs/reflection.jpg" alt="A magical poster with a reflection." />
 </a>
-
 var callback = function() {
 	var wrapper = $('#galpop-wrapper');
 	var info    = $('#galpop-info');
@@ -107,10 +112,12 @@ var callback = function() {
 $('.galpop-callback').galpop({
 	callback: callback
 });
+```
 
 Manual Open
 You can also manually open the popup whenever you wish. You will have to use the "openBox" method and pass it the settings and image URL to open.
 
+```
 <select class="manual-open">
 <option value="">Choose Image</option>
 <option value="/images/gallery/large/apocalypse.jpg">An apocalyptic Earth.</option>
@@ -129,10 +136,11 @@ $('.manual-click').click(function(e) {
 	var settings = {};
 	$.fn.galpop('openBox',settings,'/images/gallery/large/magicLake.jpg');
 });
-
+```
 
 Manual Open Group
 You can also manually open the popup as a group. Instead of passing it one url, you can use an array.
+```
 <select class="manual-open">
 <option value="">Choose Image</option>
 <option value="0">An apocalyptic Earth.</option>
@@ -164,3 +172,4 @@ $('.manual-open-group').change(function(e) {
 	var settings = {};
 	$.fn.galpop('openBox',settings,images,v);
 });
+```
